@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangulat</title>
+    <link rel= "s" href="d"><link rel="shortcut icon" href="img/face.ico" type="image/x-icon">
+</head>
+<body>
+    <style>
+
+*{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(61, 62, 121);
+}
+
+
+#container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    align-items: center;
+    height: 600px;
+    gap: 100px;
+}
+
+#emoji{
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+#hangulattext{
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(35, 179, 135);
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0.062);
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.438);
+    backdrop-filter: blur(20px);
+    
+}
+
+#sect{
+    height: 100px;
+}
+
+#csuszka{
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+}
+
+</style>
+
+    <div id="container">
+        
+        <h1 id="hangulattext">Hangulat</h1>
+
+        <img id="emoji" src="img/1.png" title="Szomoru"  alt="Szomoru">
+
+            <input id="csuszka" type="range" step="1" min="0" max="6">
+
+    </div>
+
+    
+</body>
+</html>
