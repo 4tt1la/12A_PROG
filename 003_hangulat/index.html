@@ -76,6 +76,32 @@ body{
 
     </div>
 
+
+    <script>
+
+        const slider = document.querySelector('#csuszka')
+
+        //console.log(slider)
+
+        slider.addEventListener('input', mood)
+
+        
+        function mood() {
+
+            const sliderValue = parseInt(slider.value) + 1
+
+
+               //console.log(sliderValue)
+
+            const emoji = document.querySelector("#emoji")
+
+                 //console.log(emoji)
+
+            emoji.src = `./img/${sliderValue}.png`
+        }
+
+
+    </script>
     
 </body>
 </html>
