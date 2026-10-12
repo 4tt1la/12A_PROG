@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover</title>
+    <link rel="shortcut icon" href="img/kep.jpg" type="image/x-icon">
+</head>
+<body>
+
+<style>
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 16px;
+}
+
+.hidden{
+    display: none;
+}
+
+body{
+    background-color: rgb(19, 130, 150);
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+#demo{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF1A;
+    border-radius: 20PX;
+    overflow: hidden;
+    cursor: pointer;
+
+    
+}
+
+
+#demo > img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 0.75rem;
+    border: 1px solid black;
+    object-fit: contain;
+}
+
+
+</style>
+
+
+
+<div   id="demo">
+    <p class="p" >Hanyasra értékellek?</p>
+
+
+</div>
+
+
+    <script>
+
+        const demo = document.querySelector("#demo")
+
+        const p = document.querySelector("p")
+
+        let isImgDisplayed = false;
+
+        demo.addEventListener('mouseover', kepcsere)
+        demo.addEventListener('mouseout', egerle)
+
+        function kepcsere(event){
+
+
+            if (!isImgDisplayed && event.target == demo ) {
+                
+             
+
+                const img = document.createElement('img')
+                img.src = './img/kep.jpg'
+                img.alt = "a gyasz meg a szenvedes"
+                demo.replaceChildren(img)
+                isImgDisplayed =  true;
+            }
+              
+        }
+
+
+        function egerle() {
+
+            if (isImgDisplayed ) {
+                
+                const p = document.createElement('p')
+                p.innerHTML = "Hanyasra értékellek?"
+                demo.replaceChildren(p)
+                isImgDisplayed = false
+                
+            }
+
+        }
+
+    </script>
+</body>
+</html>
